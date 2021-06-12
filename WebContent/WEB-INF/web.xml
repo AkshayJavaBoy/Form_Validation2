@@ -12,7 +12,7 @@
   <filter>
     <display-name>bfilter</display-name>
     <filter-name>bfilter</filter-name>
-    <filter-class>com.filter.bfilter</filter-class>
+    <filter-class>Vaildation_Filter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>bfilter</filter-name>
@@ -22,7 +22,7 @@
     <description></description>
     <display-name>ServletA</display-name>
     <servlet-name>ServletA</servlet-name>
-    <servlet-class>com.akshay.ServletA</servlet-class>
+    <servlet-class>Validation_Servlet </servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletA</servlet-name>

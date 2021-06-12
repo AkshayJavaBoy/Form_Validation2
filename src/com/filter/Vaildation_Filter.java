@@ -10,25 +10,25 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class bfilter implements Filter {
+public class Vaildation_Filter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		boolean flag = true;
 		String name_error = "", roll_no_error = "", addr_error = "", team_error = "", mob_no_error = "", pin_error = "";
-		long p = 0, m = 0;
-		int r = 0;
+		long pin = 0, mobile_No = 0;
+		int roll = 0;
 
 		String n = request.getParameter("name");
 
 		try {
-			r = Integer.parseInt(request.getParameter("roll_no"));
+			roll= Integer.parseInt(request.getParameter("roll_no"));
 		} catch (Exception e) {
 		}
 		String a = request.getParameter("addr");
 		try {
-			p = Long.parseLong(request.getParameter("kk"));
-			m = Long.parseLong(request.getParameter("mob_no"));
+			pin = Long.parseLong(request.getParameter("kk"));
+			mobile_No = Long.parseLong(request.getParameter("mob_no"));
 		} catch (Exception e) {
 		}
 		String t = request.getParameter("fav_team");
@@ -37,7 +37,7 @@ public class bfilter implements Filter {
 			name_error = "Name is required";
 			flag = false;
 		}
-		if (r == 0) {
+		if (roll == 0) {
 			roll_no_error = "Roll no required";
 			flag = false;
 		}
@@ -45,11 +45,11 @@ public class bfilter implements Filter {
 			addr_error = "Address is required";
 			flag = false;
 		}
-		if (p == 0) {
+		if (pin == 0) {
 			pin_error = "Name is required";
 			flag = false;
 		}
-		if (m == 0) {
+		if (mobile_No == 0) {
 			mob_no_error = "Roll no required";
 			flag = false;
 		}
